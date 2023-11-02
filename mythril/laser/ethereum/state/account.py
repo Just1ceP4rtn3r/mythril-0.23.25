@@ -23,7 +23,7 @@ class Storage:
 
         :param concrete: bool indicating whether to interpret uninitialized storage as concrete versus symbolic
         """
-        if concrete and args.unconstrained_storage is False:
+        if args.unconstrained_storage is False:
             self._standard_storage: BaseArray = K(256, 256, 0)
         else:
             self._standard_storage = Array(f"Storage{address}", 256, 256)
@@ -151,6 +151,7 @@ class Account:
 
         self._balances = balances
         self.balance = lambda: self._balances[self.address]
+
 
     def __str__(self) -> str:
         return str(self.as_dict)
