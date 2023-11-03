@@ -21,6 +21,7 @@ from mythril.analysis.module.modules.suicide import AccidentallyKillable
 from mythril.analysis.module.modules.unchecked_retval import UncheckedRetval
 from mythril.analysis.module.modules.user_assertions import UserAssertions
 from mythril.analysis.module.modules.Liveness_token_deposit import TokenDeposit
+from mythril.analysis.module.modules.Liveness_token_withdraw import TokenWithdraw
 from mythril.analysis.module.modules.Functions import Function
 from mythril.analysis.module.base import EntryPoint
 
@@ -107,6 +108,7 @@ class ModuleLoader(object, metaclass=Singleton):
                 UserAssertions(),
                 #syncxxx
                 TokenDeposit(),
+                TokenWithdraw(),
                 Function(),
             ]
         )
