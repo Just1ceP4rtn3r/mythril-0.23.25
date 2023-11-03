@@ -75,7 +75,7 @@ class TokenDeposit(DetectionModule):
         before_token = None
         for account in state.world_state.accounts:
             if(account != ACTORS.creator.value and account != ACTORS.attacker.value and account != ACTORS.someguy.value):
-                log.error(account)
+                # log.error(account)
                 # log.error(state.world_state.accounts[account].contract_name)
                 contract_account = state.world_state.accounts[account]
                 break
