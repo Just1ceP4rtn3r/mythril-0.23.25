@@ -55,7 +55,6 @@ class UncheckedRetval(DetectionModule):
 
     def _execute(self, state: GlobalState) -> List[Issue]:
         """
-
         :param state:
         :return:
         """
